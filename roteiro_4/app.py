@@ -10,6 +10,6 @@ botao = st.button("Buscar informações")
 if botao:
     r = requests.get(f'https://restcountries.com/v3.1/name/{pais}')
     st.write("Esse é o nome comum do país procurado:")
-    st.write(r.json()[0]["name"]["nativeName"]["por"]["common"])
+    st.write(r.json()[0]["name"]["common"])
     st.write("Esse é o nome oficial do país procurado:")
-    st.write(r.json()[0]["name"]["nativeName"]["por"]["official"])
+    st.write(r.json()[0]["name"]["official"])
